@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Questao1</string>
+    <string name="btn1">TableLayout</string>
+    <string name="btn2">AbsoluteLayout</string>
+    <string name="btn3">RelativeLayout</string>
+    <string name="btn4">LinearLayout (ListView)</string>
+    <string name="voltar">Voltar</string>
+</resources>

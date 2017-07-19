@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Detalhe do CEP</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share"></string>
+</resources>

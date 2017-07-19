@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rodrigobento.questao1.MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:onClick="tableLayout"
+        android:text="@string/btn1" />
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="absoluteLayout"
+        android:text="@string/btn2"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="relativeLayout"
+        android:text="@string/btn3"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/btn4"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="linearLayout"
+        android:text="@string/btn4"
+        android:layout_marginTop="40dp"/>
+
+</LinearLayout>
