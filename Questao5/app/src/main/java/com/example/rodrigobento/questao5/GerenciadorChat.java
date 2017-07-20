@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GerenciadorChat extends ListActivity {
 
@@ -37,16 +38,21 @@ public class GerenciadorChat extends ListActivity {
             public void onClick(View view) {
                 // Cria a String advindo do EditText
                 String msg = mensagem.getText().toString();
-                // Troca os espaços pelo sinal de + para salvar no bd.
-                String msgFinal = msg.replace(" ", "+");
-                String auxiliar = pessoa.replace(" ", "+");
-                // Cria a String responsavel por criar a URL, concatenando os valores para uma requisição GET
-                String urlParams = "https://peaceful-shore-40477.herokuapp.com/add?nome="+auxiliar+"&mensagem="+msgFinal;
-                // Instancia e executa a AsynTask responsável por salvar a mensagem no servidor
-                AdicionarMensagem add = new AdicionarMensagem();
-                add.execute(urlParams);
-                mensagem.setText("");
-                listar();
+                if(msg!=null && !msg.equals("")){
+                    // Troca os espaços pelo sinal de + para salvar no bd.
+                    String msgFinal = msg.replace(" ", "+");
+                    String auxiliar = pessoa.replace(" ", "+");
+                    // Cria a String responsavel por criar a URL, concatenando os valores para uma requisição GET
+                    String urlParams = "https://peaceful-shore-40477.herokuapp.com/add?nome="+auxiliar+"&mensagem="+msgFinal;
+                    // Instancia e executa a AsynTask responsável por salvar a mensagem no servidor
+                    AdicionarMensagem add = new AdicionarMensagem();
+                    add.execute(urlParams);
+                    mensagem.setText("");
+                    listar();
+                } else {
+                    Toast.makeText(GerenciadorChat.this, "Informe uma mensagem", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }

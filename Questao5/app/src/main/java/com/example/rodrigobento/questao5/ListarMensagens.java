@@ -1,7 +1,10 @@
 package com.example.rodrigobento.questao5;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -30,7 +33,7 @@ public class ListarMensagens extends AsyncTask<String, Void, String>{
     }
 
     /*O método doInBackground é o responsável pelo o processamento pesado, pois ele é executado
-    em uma Thread separada. Enquanto é processada a informação, a tela do usuário não ficará travada*/
+        em uma Thread separada. Enquanto é processada a informação, a tela do usuário não ficará travada*/
     @Override
     protected String doInBackground(String... strings) {
         StringBuilder s = null;

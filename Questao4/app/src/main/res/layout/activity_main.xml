@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rodrigobento.questao4.MainActivity">
+
+    <Button
+        android:id="@+id/download"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:paddingTop="15dp"
+        android:onClick="fazerDownload"
+        android:text="Baixar"
+        android:layout_marginBottom="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="93dp"
+        android:hint="Informe aqui sua URL..."
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/download"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Aplicativo para Download de arquivos, com base na URL."
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_above="@+id/imageView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="36dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/www"
+        android:layout_above="@+id/textView"
+        android:layout_alignRight="@+id/download"
+        android:layout_alignEnd="@+id/download"
+        android:layout_marginBottom="37dp" />
+
+</RelativeLayout>
